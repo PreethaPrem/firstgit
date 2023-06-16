@@ -1,1 +1,140 @@
 this is my first git text
+
+systech@DESKTOP-HJHHOHM MINGW64 ~
+$ pwd
+/c/Users/systech
+
+systech@DESKTOP-HJHHOHM MINGW64 ~
+$ cd /E/
+
+systech@DESKTOP-HJHHOHM MINGW64 /E
+$ ls -lrt
+total 9
+drwxr-xr-x 1 systech 197121    0 Apr 19 10:35 '$RECYCLE.BIN'/
+-rw-r--r-- 1 systech 197121    0 Apr 28 14:37  CCNA.txt
+-rw-r--r-- 1 systech 197121    0 May  3 22:32  MyBackup.tibx
+-rw-r--r-- 1 systech 197121  112 May 17 09:39  bootTel.dat
+drwxr-xr-x 1 systech 197121    0 May 31 11:33 'Pendrive data'/
+drwxr-xr-x 1 systech 197121    0 Jun  8 19:50 'win server'/
+drwxr-xr-x 1 systech 197121    0 Jun  8 19:54 'server 333'/
+-rw-r--r-- 1 systech 197121 2048 Jun  8 23:04  MyBackup_full_b1_s1_v1.tib
+drwxr-xr-x 1 systech 197121    0 Jun  8 23:11 'Drive(C)'/
+drwxr-xr-x 1 systech 197121    0 Jun 15 10:14 'System Volume Information'/
+drwxr-xr-x 1 systech 197121    0 Jun 15 10:48  JavaFiles/
+drwxr-xr-x 1 systech 197121    0 Jun 15 10:51  Gittxt/
+
+systech@DESKTOP-HJHHOHM MINGW64 /E
+$ Gittxt/
+bash: Gittxt/: Is a directory
+
+systech@DESKTOP-HJHHOHM MINGW64 /E
+$ cd Gittxt/
+
+systech@DESKTOP-HJHHOHM MINGW64 /E/Gittxt (master)
+$ ls -lrt
+total 1
+-rw-r--r-- 1 systech 197121 25 Jun 15 10:40 gittxt.txt
+
+systech@DESKTOP-HJHHOHM MINGW64 /E/Gittxt (master)
+$ git inti
+git: 'inti' is not a git command. See 'git --help'.
+
+The most similar command is
+        init
+
+systech@DESKTOP-HJHHOHM MINGW64 /E/Gittxt (master)
+$ git init
+Reinitialized existing Git repository in E:/Gittxt/.git/
+
+systech@DESKTOP-HJHHOHM MINGW64 /E/Gittxt (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        gittxt.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+systech@DESKTOP-HJHHOHM MINGW64 /E/Gittxt (master)
+$ git add gittxt
+fatal: pathspec 'gittxt' did not match any files
+
+systech@DESKTOP-HJHHOHM MINGW64 /E/Gittxt (master)
+$ git add gittxt.txt
+
+systech@DESKTOP-HJHHOHM MINGW64 /E/Gittxt (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   gittxt.txt
+
+
+systech@DESKTOP-HJHHOHM MINGW64 /E/Gittxt (master)
+$ git commit -m "first commit"
+[master (root-commit) 7d89cdc] first commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 gittxt.txt
+
+systech@DESKTOP-HJHHOHM MINGW64 /E/Gittxt (master)
+$ git config --global user.email
+joshua@offgridlearning.com
+
+systech@DESKTOP-HJHHOHM MINGW64 /E/Gittxt (master)
+$ git config user.email "prempreetha2@gamil.com"
+
+systech@DESKTOP-HJHHOHM MINGW64 /E/Gittxt (master)
+$ git config user.name "PreethaPrem"
+
+systech@DESKTOP-HJHHOHM MINGW64 /E/Gittxt (master)
+$ cat .git/config
+[core]
+        repositoryformatversion = 0
+        filemode = false
+        bare = false
+        logallrefupdates = true
+        symlinks = false
+        ignorecase = true
+[user]
+        email = prempreetha2@gamil.com
+        name = PreethaPrem
+
+systech@DESKTOP-HJHHOHM MINGW64 /E/Gittxt (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+systech@DESKTOP-HJHHOHM MINGW64 /E/Gittxt (master)
+$ git remote add origin https://github.com/PreethaPrem/firstgit.git
+
+systech@DESKTOP-HJHHOHM MINGW64 /E/Gittxt (master)
+$ git remote -v
+origin  https://github.com/PreethaPrem/firstgit.git (fetch)
+origin  https://github.com/PreethaPrem/firstgit.git (push)
+
+systech@DESKTOP-HJHHOHM MINGW64 /E/Gittxt (master)
+$ git branch -M studyrepo
+
+systech@DESKTOP-HJHHOHM MINGW64 /E/Gittxt (studyrepo)
+$ git branch -M main
+
+systech@DESKTOP-HJHHOHM MINGW64 /E/Gittxt (main)
+$ git remote add origin https://github.com/PreethaPrem/firstgit.git
+error: remote origin already exists.
+
+systech@DESKTOP-HJHHOHM MINGW64 /E/Gittxt (main)
+$ git push -u origin main
+info: please complete authentication in your browser...
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 233 bytes | 233.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/PreethaPrem/firstgit.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
